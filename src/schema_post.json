@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "properties": {
+    "usages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entitlementId": {
+            "type": "string"
+          },
+          "usage": {
+            "type": "number"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": ["number", "string", "boolean"]
+                }
+              }
+            }
+          },
+          "usageType": {
+            "type": "string",
+            "enum": ["Incremental", "Current"]
+          },
+          "tenantId": {
+            "type": "string"
+          },
+          "messageId": {
+            "type": "string"
+          },
+          "timestampUtc": {
+            "type": "string",
+            "format": "full-date"
+          }
+        },
+        "required": ["entitlementId", "usage", "tenantId", "messageId"]
+      }
+    }
+  },
+  "required": ["usages"]
+}
