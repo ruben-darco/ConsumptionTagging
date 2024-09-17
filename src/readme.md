@@ -11,6 +11,11 @@ There are example messages in the `data` directory.
 
 This is very much POC/Testing code. There's no aim to produce something production ready.
 
+## Examples
+There's a `data` directory that has examples payloads. You can easily use `curl` to send those using `curl --json @file.json http://localhost:8888`
+
+The examples are named `<entitlementid>_<###>_<description>.json`. This means you can run them in the number order.
+
 ## TODO
 It would be good to demonstrate how we would read data. You can do that now in influx with some specific queries, but examples *in code* would be nice.
 
