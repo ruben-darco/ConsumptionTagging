@@ -1,0 +1,45 @@
+[
+    {
+        "tenantId": "f2584f14-7c0e-4b30-9c48-71a6c7112e6e",   //Dev Environment
+        "timespan-bin": "2024-09-20", //Daily
+        "tags": [
+            {
+                "orgId": "cd53614e-28ff-4b00-a7ab-a9b14eaadb5c", //Enriched for reporting
+                "tenantId": "f2584f14-7c0e-4b30-9c48-71a6c7112e6e", //Enriched for reporting
+                "wf.environment-name": "Development",
+                "wf.appId": "05b12c6d-8cfa-4ca3-ad79-f9901280999c",
+                "wf.total_instances": 10,
+                "wf.instance_entitlement": 2,
+                "wf.normal_instances": 2,
+                "wf.test_instances": 8
+            }
+        ]
+    },
+    {
+        "tenantId": "e1484f14-7c0e-4b30-9c48-71a6c7112e9d",  //PM Tenant
+        "timespan-bin": "2024-09-20", //Daily
+        "tags": [
+            {
+                "orgId": "cd53614e-28ff-4b00-a7ab-a9b14eaadb5c", //Enriched for reporting
+                "tenantId": "e1484f14-7c0e-4b30-9c48-71a6c7112e9d", //Enriched for reporting
+                "pm.total_processes": 9,
+                "pm.unpublished_processes": 2,
+                "pm.published_processes": 1,
+                "pm.archived_processes": 1,
+                "pm.published_models": 1
+            }
+        ]
+    },
+    {
+        "tenantId": "44584f14-7c0e-4b30-9c48-71a6c7112e3d", //365 Tenant
+        "timespan-bin": "2024-09-20", //Daily
+        "tags": [
+            {
+                "orgId": "cd53614e-28ff-4b00-a7ab-a9b14eaadb5c", //Enriched for reporting
+                "tenantId": "44584f14-7c0e-4b30-9c48-71a6c7112e3d", //Enriched for reporting
+                "wf3.billable_workflows": 3,
+                "wf3.billable_actions": 35
+            }
+        ]
+    }
+]

@@ -1,22 +1,18 @@
 {
   "usages": [
     {
-      "entitlementId": "processes",
-      "usage": 0,
+      "entitlementId": "pm_processes",
+      "timespan": "2024-09-22 10:00:00",
+      "usage": 1,
       "tags": [
         {
             "name": "un-published",
-            "value": 0
+            "value": 1
           },
           {
             "name": "published",
-            "value": -1
-          },
-          {
-            "name": "archived",
-            "value": 1
+            "value": 0
           }
-  
         ],
       "usageType": "Incremental",
       "tenantId": "e1484f14-7c0e-4b30-9c48-71a6c7112e9d",

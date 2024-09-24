@@ -1,0 +1,51 @@
+
+[
+    {
+        "tenantId": "e1484f14-7c0e-4b30-9c48-71a6c7112e9d",
+        "timespan": "2024-09-20",
+        "tags": [
+            {
+                "pm.total_processes": 2,
+                "pm.unpublished_processes" : 1,
+                "pm.published_processes" : 1,
+                "pm.published_models" : 1
+            }
+        ]
+    },
+    {
+        "tenantId": "e1484f14-7c0e-4b30-9c48-71a6c7112e9d",
+        "timespan": "2024-09-21",
+        "tags": [
+            {
+                "pm.total_processes": 2,
+                "pm.unpublished_processes" : 1,
+                "pm.published_processes" : 0,
+                "pm.archived_processes" : 1
+            }
+        ]
+    },
+    {
+        "tenantId": "e1484f14-7c0e-4b30-9c48-71a6c7112e9d",
+        "timespan": "2024-09-22",
+        "tags": [
+            {
+                "pm.total_processes": 4,
+                "pm.unpublished_processes" : 2,
+                "pm.published_processes" : 0,
+                "pm.archived_processes" : 2
+            }
+        ]
+    },
+    {
+        "tenantId": "e1484f14-7c0e-4b30-9c48-71a6c7112e9d",
+        "timespan": "2024-09-23",
+        "tags": [
+            {
+                "pm.total_processes": 3,
+                "pm.unpublished_processes" : 1,
+                "pm.published_processes" : 0,
+                "pm.archived_processes" : 2
+            }
+        ]
+    }
+]
