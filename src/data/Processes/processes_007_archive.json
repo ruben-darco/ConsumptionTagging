@@ -1,20 +1,17 @@
 {
   "usages": [
     {
-      "entitlementId": "processes",
-      "usage": 1,
+      "entitlementId": "pm_processes",
+      "timespan": "2024-09-22 11:00:00",
+      "usage": 0,
       "tags": [
-        {
-            "name": "un-published",
-            "value": 1
-          },
           {
             "name": "published",
-            "value": 0
+            "value": -1
           },
           {
             "name": "archived",
-            "value": 0
+            "value": 1
           }
   
         ],

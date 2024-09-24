@@ -1,0 +1,22 @@
+{
+  "usages": [
+    {
+      "entitlementId": "wf-instances-365",
+      "timespan": "2024-09-21 12:00:00",
+      "usage": 5,
+      "tags": [
+        {
+          "name": "wf3.billable_instances",
+          "value": 3
+        },
+        {
+          "name": "wf3.billable_actions",
+          "value": 35
+        }
+      ],
+      "usageType": "Incremental",
+      "tenantId": "44584f14-7c0e-4b30-9c48-71a6c7112e3d",
+      "messageId": "aaa772cc-2ca0-4fd3-a09f-083016cdbd11"
+    }
+  ]
+}

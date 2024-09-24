@@ -1,26 +1,21 @@
+from models import InfluxClient
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from datetime import datetime, timezone
 import logging
 import json
-import time
-import os
 import jsonschema
-from influxdb_client import Point, InfluxDBClient
-from influxdb_client.client.write_api import SYNCHRONOUS
-
-g_influx_bucket = "Nintex"
-g_influx_org = "Prof-X"
-
-client = InfluxDBClient(url="https://influx.prof-x.net", token="aWz3qJTgkjBe47XEFgCeNJ1ZJdMxW0c3TEVSSKW4qb-ZvFB97CgI4NqfdNzFwhLqf_4qgtxAcZlA82LHAHG-zA==", org=g_influx_org)
-
-
-
-
+ 
+g_client : InfluxClient
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
-    # supress all standard logging.
+    # suppress all standard logging.
     def log_message(self, format, *args):
         return
+
+    def d_GET(self): 
+        logging.debug("%s %s", self.client_address[0], self.requestline)
+        self.send_response(200)
+        self.end_headers()
 
     def do_POST(self):
         logging.debug("%s %s", self.client_address[0], self.requestline)
@@ -67,9 +62,8 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                 p = p.field("usage", usage["usage"])
                 print("Writing...")
                 print(p)
-                write_api = client.write_api(write_options=SYNCHRONOUS)
-                write_api.write(bucket=g_influx_bucket, org=g_influx_org, record=p, time_precision="s")
-                write_api.close()
+               
+                g_client.write(p)
         except Exception as e:
             self.send_error(500, f"Failed to write to influx: {e}")
             self.end_headers()
@@ -91,10 +85,13 @@ def main():
     try:
         httpd = HTTPServer(('0.0.0.0', 8888), SimpleHTTPRequestHandler)
         logging.info("Started http-server on port 8888...")
+       
+        # g_client = InfluxClient(url= "https://influx.prof-x.net", bucket="Nintex", org="Prof-X", token="aWz3qJTgkjBe47XEFgCeNJ1ZJdMxW0c3TEVSSKW4qb-ZvFB97CgI4NqfdNzFwhLqf_4qgtxAcZlA82LHAHG-zA=="
+        g_client = InfluxClient(url= "https://influx.prof-x.net", bucket="Nintex", org="Prof-X", token="aWz3qJTgkjBe47XEFgCeNJ1ZJdMxW0c3TEVSSKW4qb-ZvFB97CgI4NqfdNzFwhLqf_4qgtxAcZlA82LHAHG-zA==")  
         httpd.serve_forever()
     except KeyboardInterrupt:
         logging.info("^C received, shutting down server")
-        write_api.close()
+        g_client.close();
         httpd.socket.close()
 
 if __name__ == '__main__':

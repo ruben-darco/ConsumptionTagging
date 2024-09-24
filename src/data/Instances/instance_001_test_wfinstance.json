@@ -1,0 +1,33 @@
+{
+  "usages": [
+    {
+      "entitlementId": "wf-instances",
+      "timespan": "2024-09-20 12:00:00",
+      "usage": 2,
+      "tags": [
+        {
+          "name": "normal_wf_instances", 
+          "value": 2
+        },{
+          "name": "test_wf_instances",
+          "value": 8
+        },
+        {
+          "name": "environment-name",
+          "value": "Development"
+        },
+        {
+          "name": "appId",
+          "value": "567772cb-2ea0-2fe3-b0ae-193017cdbd15"
+        },
+        {
+          "name": "workflowId",
+          "value": "767872cc-5290-8fe4-c0af-2a3017cdbd19"
+        }
+      ],
+      "usageType": "Incremental",
+      "tenantId": "f2584f14-7c0e-4b30-9c48-71a6c7112e6e",
+      "messageId": "aaa772cc-2ca0-4fd3-a09f-083016cdbd11"
+    }
+  ]
+}
